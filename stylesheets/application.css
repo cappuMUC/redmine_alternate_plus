@@ -1,6 +1,13 @@
 @import url("../../alternate/stylesheets/application.css");
 
-/** Changes of the original implementation **/
+#main {
+  margin-top: 0px;
+  border-left: 1px solid #d7d7d7;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  background-color: #fff;
+}
+
 #projects-index {
   column-count: 1;
   -webkit-column-count: 1;
@@ -11,10 +18,15 @@ ul.projects.root {
   width: 50%;
 }
 
+/* Corrupts projects_table plugin
 a.project.child {
   font-weight:bold;
 }
+*/
 
+tr.project td {
+  padding: 5px;
+}
 #main-menu li a,
 #main-menu li a:hover {
   background-color: unset;
@@ -28,11 +40,27 @@ a.project.child {
   margin-left: 6px;
 }
 
+#main-menu li a.selected {
+  background-color: #fff;
+}
+
 #main-menu .menu-children {
   margin-left: 6px;
   border-top: 1px solid #92abc9;
   box-shadow: 1px 1px 1px #7a7a7a;
 }
+
+#content {
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  border-right: 1px solid #d7d7d7;
+}
+
+#main.nosidebar #content {
+  border: unset;
+}
+
 
 #content h2:first-of-type {
   //visibility: hidden;
@@ -45,7 +73,7 @@ a.project.child {
   background-repeat: no-repeat;
   background-size: 4.5em;
   background-position: 18px 6px;
-  padding: 7px 6px 20px 80px;
+  padding: 8px 6px 20px 80px;
 }
 
 /* Login Form */
@@ -60,3 +88,9 @@ a.project.child {
   color: #f8f8f8;
   border: none;
   border-radius: 3px;
+}
+
+/* Calendar */
+table.cal td.today {
+  background-color:#ccc;
+}
