@@ -1,12 +1,40 @@
-@import url("../../alternate/stylesheets/application.css");
+@import url("../../../stylesheets/application.css");
+@import url("./responsive.css");
 
+@import url('https://fonts.googleapis.com/css?family=Barlow|Work+Sans|Noto+Sans|Ubuntu');
+
+/* Main Layout */
+
+body { font-family: 'Ubuntu', sans-serif; }
 #main {
   margin-top: 0px;
-  border-left: 1px solid #d7d7d7;
-  border-right: 1px solid #bbb;
-  border-bottom: 1px solid #bbb;
+  border: unset !important;
   background-color: #fff;
 }
+
+#content {
+  width: 80%;
+  border: unset !important;
+}
+
+#sidebar {
+  width: 15%;
+}
+
+#sidebar h3 {
+  border-bottom: 2px solid #666;
+}
+
+#sidebar ul {
+  line-height: 2em;
+}
+
+#footer {
+  border: unset !important;
+  background-color: #1c344b;
+}
+
+/* Projects View  */
 
 #projects-index {
   column-count: 1;
@@ -76,6 +104,9 @@ tr.project td {
   padding: 8px 6px 20px 80px;
 }
 
+#header h1 {
+  font-family: 'Ubuntu', sans-serif;
+}
 /* Login Form */
 
 #login-form {
@@ -90,7 +121,46 @@ tr.project td {
   border-radius: 3px;
 }
 
+/* Issues Table */
+table.issues {
+  border: none;
+  background-color: #fff;
+}
+
+table.issues thead th {
+  border-bottom: 2px solid #666;
+  background-color: unset !important;
+}
+
+table.issues tbody tr.odd, 
+table.issues tbody tr.even,
+table.issues tbody tr.group td {
+  padding: 5px 5px;
+  line-height: 1.5em;
+  border-bottom: 1px solid #666;
+}
+
+
+table.issues tr.even {
+  //background-color: #f2f2f2;
+  background-color: unset !important;
+}
+
+table.issues tr.odd {
+  //background-color: unset;
+  background-color: unset !important;
+}
+
+table.progress { border: unset !important; }
+
+#issue_tree table.issues tbody tr,
+#relations table.issues tbody tr { 
+  border: none;
+  background-color: #ffffdd; }
+
 /* Calendar */
 table.cal td.today {
   background-color:#ccc;
 }
+
+table.list tr.overdue td.due_date  { color: #c22; }
